@@ -6,8 +6,7 @@ const buttonSubmit = document.querySelector('button');
 // =============== variables
 const words = ['10', 'after', 'repots', 'poowers', 'powers', 'these',
     'time', 'know', 'from', 'could', 'people', 'tsropwe'];
-const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-    'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
 let allow = [];
 
 // =============== randomized from words in dictionary
@@ -78,7 +77,7 @@ const pointsCalculation = () => {
         if (findLetters && words.includes($input)) {
             results.innerHTML = `<div class="w-50 mx-auto my-3 alert alert-success">
             The word <b>${$input}</b> is worth : ${pointsEarned} points.
-            Highest possible scoring word is <b>${highWord(inputArray)}</b>
+            Highest possible word score is <b>${highWord(inputArray)}</b>
         </div>`;
         }
         else if (!findLetters) {
@@ -88,7 +87,7 @@ const pointsCalculation = () => {
         }
         else if (findLetters && !words.includes($input)) {
             results.innerHTML = `<div class="w-50 mx-auto my-3 alert alert-danger">
-            <b>${$input}</b> does not exist in dictionary
+            <b>${$input}</b> does not exist in the dictionary
             </div>`;
         }
 
